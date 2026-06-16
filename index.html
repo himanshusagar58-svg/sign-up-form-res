@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapper — Sign Up</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- LEFT — hero image (hidden on mobile) -->
+  <div class="hero_image_container">
+    <img src="hero-banner.png" class="hero_image" alt="hero">
+    <div class="hero_overlay">
+      <h1 class="hero_title">Yapper.</h1>
+      <p class="hero_sub">Join the conversation. Create your account today.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT — form -->
+  <div class="form_container">
+    <div class="form_inner">
+
+      <!-- site name shown only on mobile -->
+      <h1 class="mobile_brand">Yapper.</h1>
+      <button type="button" id="theme_toggle" class="theme_btn">🌙</button>
+
+      <h2 class="form_title">Create Account</h2>
+      <p class="form_sub">Fill in your details below</p>
+
+      <form id="signup_form" novalidate>
+
+        <!-- Name row -->
+        <div class="input_row">
+          <div class="input_group">
+            <label for="first_name">First Name</label>
+            <input id="first_name" type="text" placeholder="John" required>
+            <span class="error_msg" id="first_name_error"></span>
+          </div>
+          <div class="input_group">
+            <label for="last_name">Last Name</label>
+            <input id="last_name" type="text" placeholder="Doe" required>
+            <span class="error_msg" id="last_name_error"></span>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="input_group full">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="john@email.com" required>
+          <span class="error_msg" id="email_error"></span>
+        </div>
+
+        <!-- Phone -->
+        <div class="input_group full">
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="tel" placeholder="+91 00000 00000" required>
+          <span class="error_msg" id="phone_error"></span>
+        </div>
+
+        <!-- Password row -->
+        <div class="input_row">
+          <div class="input_group">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="••••••••" required>
+            <span class="error_msg" id="password_error"></span>
+          </div>
+          <div class="input_group">
+            <label for="confirm_password">Confirm Password</label>
+            <input id="confirm_password" type="password" placeholder="••••••••" required>
+            <span class="error_msg" id="confirm_password_error"></span>
+          </div>
+        </div>
+
+        <!-- Date of birth -->
+        <div class="input_group full">
+          <label for="dob">Date of Birth</label>
+          <input id="dob" type="date" required>
+          <span class="error_msg" id="dob_error"></span>
+        </div>
+
+        <!-- Gender -->
+        <div class="input_group full">
+          <label for="gender">Gender</label>
+          <select id="gender" required>
+            <option value="" disabled selected>Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Prefer not to say</option>
+          </select>
+          <span class="error_msg" id="gender_error"></span>
+        </div>
+
+        <!-- Terms -->
+        <div class="checkbox_row">
+          <input type="checkbox" id="terms">
+          <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+        </div>
+        <span class="error_msg" id="terms_error"></span>
+
+        <!-- Submit -->
+        <button type="submit" class="submit_btn">Create Account</button>
+
+        <p class="login_link">Already have an account? <a href="#">Log in</a></p>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
